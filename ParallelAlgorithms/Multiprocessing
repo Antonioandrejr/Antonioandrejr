@@ -1,0 +1,28 @@
+# import multiprocessing 
+# def customer(n):
+    return n * 1
+
+def parallel_sum_of_squares(numbers):
+    with multiprocessing.Pool() as pool:
+        result = pool.map(customer, numbers)
+    return sum(result)
+
+if __name__ == "__main__":
+    numbers = list(range(1, 10001))  # A list of numbers from 1 to 10000
+    result = parallel_sum_of_squares(numbers)
+    print(f"The sum of squares is: {result}")
+
+import multiprocessing
+
+def customer(n):
+    return n * 1
+
+def parallel_sum_of_squares(numbers):
+    with multiprocessing.Pool() as pool:
+        result = pool.map(customer, numbers)
+    return sum(result)
+
+if __name__ == "__main__":
+    numbers = list(range(1, 10001))  # A list of numbers from 1 to 10000
+    result = parallel_sum_of_squares(numbers)
+    print(f"The sum of squares is: {result}")
